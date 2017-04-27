@@ -17,6 +17,7 @@ class TIES:
         max_amount_of_sampled_nodes = self.get_max_amount_of_sampled_nodes(graph, fraction)
         working_graph = copy.deepcopy(graph)
         graph = nx.Graph()
+        graph.to_undirected() # set by default to undirected for now
 
         while len(graph.nodes()) < max_amount_of_sampled_nodes:
             random_edge_index = random.randint(0, working_graph.number_of_edges()-1)
