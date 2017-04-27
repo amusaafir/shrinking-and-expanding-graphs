@@ -2,3 +2,4 @@ Misc/Debug
 Misc/CReadFileTest/Debug
 Misc/.vs
 CompSysDemo/.idea/workspace.xml
+CompSysDemo/*.pyc
