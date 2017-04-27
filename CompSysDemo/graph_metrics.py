@@ -1,7 +1,6 @@
 import networkx as nx
 
 class GraphMetrics:
-    # Just to test whether the loader works we calculate the average degree and compare it with the result from Gephi #
     def calculate_average_degree(self, graph):
         total_degree = 0
 

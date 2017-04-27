@@ -9,19 +9,17 @@ Total-Induced Edge Sampling (TIES): http://docs.lib.purdue.edu/cgi/viewcontent.c
 class TIES:
     def sample(self, graph, fraction):
         edge_based_node_graph = self.edge_based_node_step(graph, fraction)
-        self.induction_step(graph, edge_based_node_graph)
+        sampled_graph = self.induction_step(graph, edge_based_node_graph)
 
-        return None
+        return sampled_graph
 
     def edge_based_node_step(self, graph, fraction):
-
         max_amount_of_sampled_nodes = self.get_max_amount_of_sampled_nodes(graph, fraction)
         working_graph = copy.deepcopy(graph)
         graph = nx.Graph()
 
         while len(graph.nodes()) < max_amount_of_sampled_nodes:
-            random_edge_index = random.randint(0, working_graph.number_of_edges())
-
+            random_edge_index = random.randint(0, working_graph.number_of_edges()-1)
             edge = working_graph.edges()[random_edge_index]
             graph.add_node(edge[0])
             graph.add_node(edge[1])
