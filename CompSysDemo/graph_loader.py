@@ -5,7 +5,6 @@ class GraphLoader:
         print 'Graph loader initialized.'
 
     def create_undirected_graph_from_file(self, path):
-        d = 0
         graph = nx.Graph()
         graph.to_undirected()
 
