@@ -14,4 +14,4 @@ ties = TIES()
 sampled_graph = ties.sample(facebook_graph, 0.5)
 
 graph_writer = GraphWriter()
-graph_writer.save_edge_list_graph_to_file(sampled_graph)
+graph_writer.save_edge_list_graph_to_csv(sampled_graph)
