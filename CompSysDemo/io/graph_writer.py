@@ -8,6 +8,6 @@ class GraphWriter:
         output_file.write("Source Target\n")
 
         for edge in graph.edges():
-            output_file.write(edge[0] + " " + edge[1] + "\n")
+            output_file.write(str(edge[0]) + " " + str(edge[1]) + "\n")
 
         output_file.close()
