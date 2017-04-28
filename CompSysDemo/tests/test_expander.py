@@ -2,6 +2,7 @@ from __future__ import absolute_import
 from expander import *
 import networkx as nx
 import unittest
+from io.graph_writer import *
 
 class TestTIES(unittest.TestCase):
     def test_convert_graph_to_indicated(self):
@@ -37,7 +38,7 @@ class TestTIES(unittest.TestCase):
         # Assert
         self.assertEqual(len(sampled_graphs), 5)
 
-    def test_expand(self):
+    """def test_expand(self):
         # Arrange
         expander = Expander()
 
@@ -51,4 +52,4 @@ class TestTIES(unittest.TestCase):
 
         # Assert
         print 'Length:',len(expanded_graph.nodes())
-        self.assertTrue(True)
+    """
