@@ -14,7 +14,7 @@ The following *undirected* Facebook graph from SNAP was used for the following r
 
 The output (expanded) graph can be found in `CompSysDemo/graph_output/expanded_fb_graph_28-04-2017 04-47-51.csv`
 
-**Gephi result**
+**Result: analyzing the expanded output file using Gephi**
 
 || Original Facebook Graph | Sampled version (1 version using TIES). Fraction = 0.5)| Expanded version - 3 times using TIES and the star topology structure. Sampled 5 different versions of the graph using a fraction of 0.6 of the original graph and connected them using the star structure. |
 |:-------|:------------------------|:------------------------------------------------------:|:-----:|
