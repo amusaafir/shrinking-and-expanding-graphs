@@ -17,7 +17,7 @@ The output (expanded) graph can be found in `CompSysDemo/graph_output/expanded_f
 **Gephi result**
 
 || Original Facebook Graph | Sampled version (1 version using TIES). Fraction = 0.5)| Expanded version - 3 times using TIES and the star topology structure. Sampled 5 different versions of the graph using a fraction of 0.6 of the original graph and connected them using the star structure. |
-|-------| ------------------------|:------------------------------------------------------:| -----:|
+|:-------|:------------------------|:------------------------------------------------------:|:-----:|
 | Amount of nodes |4039| 2020 | 12115 |
 | Amount of edges | 88234 | 55633 | 336103 |
 | Average degree | 43.691 | 55.082 | 55.485 |
