@@ -36,3 +36,19 @@ class TestTIES(unittest.TestCase):
 
         # Assert
         self.assertEqual(len(sampled_graphs), 5)
+
+    def test_expand(self):
+        # Arrange
+        expander = Expander()
+
+        graph = nx.Graph()
+        graph.add_edge(0, 1)
+        graph.add_edge(0, 2)
+        graph.add_edge(1, 2)
+
+        # Act
+        expanded_graph = expander.expand(graph, 3)
+
+        # Assert
+        print 'Length:',len(expanded_graph.nodes())
+        self.assertTrue(True)

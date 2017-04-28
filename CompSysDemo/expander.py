@@ -2,12 +2,14 @@ import networkx as nx
 from string import ascii_lowercase
 from ties import *
 from string import ascii_lowercase
+import random
 
 class Expander:
     def expand(self, graph, improper_fraction):
         sampled_graphs = self.sample_graphs(graph, improper_fraction)
+        expanded_graph = self.link_graphs_using_star(sampled_graphs)
 
-        return None
+        return expanded_graph
 
     def sample_graphs(self, graph, improper_fraction):
         # Hardcoded sampling size at the moment: 5 different sampled graphs - fraction: 0.6 if improper fraction = 3#
@@ -22,10 +24,38 @@ class Expander:
 
         return sampled_graphs
 
+    def link_graphs_using_star(self, sampled_graphs):
+        expanded_graph = nx.Graph()
+        expanded_graph.to_undirected()
+        centerGraph = None
 
-    def link_graphs_using_star(self, graphs):
-        graph = nx.Graph()
-        graph.to_undirected()
+        for graph in sampled_graphs:
+            self.put_nodes_from_original_graph_in_given_graph(graph, expanded_graph)
+            self.put_edges_from_original_graph_in_given_graph(graph, expanded_graph)
+
+            if centerGraph is None: # Add center graph
+                centerGraph = graph
+                continue
+
+            # Pick a random node from the center graph and target graph
+            randomNodeSource = self.get_random_node_from_graph(centerGraph)
+            randomNodeTarget = self.get_random_node_from_graph(graph)
+
+            # Link it inside the expanded graph
+            expanded_graph.add_edge(randomNodeSource, randomNodeTarget)
+
+        return expanded_graph
+
+    def put_nodes_from_original_graph_in_given_graph(self, original_graph, given_graph):
+        for original_node in original_graph.nodes():
+            given_graph.add_node(original_node)
+
+    def put_edges_from_original_graph_in_given_graph(self, original_graph, given_graph):
+        for original_edge in original_graph.edges():
+            given_graph.add_edge(*original_edge)
+
+    def get_random_node_from_graph(self, graph):
+        return graph.nodes()[random.randint(0, graph.number_of_nodes() - 1)]
 
     # Add an indicator to the graph so that we can have separate sampled graphs that have different nodes#
     def convert_graph_to_indicated(self, graph, indicator):
