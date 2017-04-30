@@ -4,7 +4,7 @@ This expanding algorithm uses TIES as the sampling algorithm.
 
 **How to run**
 
-Compile `main.py`. *Note: for now if you want to change the default expanding size (currently set as `3`), you also need to provide how many sampled graphs you want. This process will be later automated.*
+Run `main.py`. *Note: if you want to change the default expanding size (currently set as `3`), you also need to provide how many sampled graphs you want. This process will be later automated.*
 
 ## First results (CompSys)
 
