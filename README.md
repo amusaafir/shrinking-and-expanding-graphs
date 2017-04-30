@@ -16,13 +16,13 @@ The output (expanded) graph can be found in `CompSysDemo/graph_output/expanded_f
 
 **Result: analyzing the expanded output file using Gephi**
 
-|| Original Facebook Graph | Sampled version (1 version using TIES). Fraction = 0.5)| Expanded version - 3 times using TIES and the star topology structure. Sampled 5 different versions of the graph using a fraction of 0.6 of the original graph and connected them using the star structure. |
-|:-------|:------------------------|:------------------------------------------------------:|:-----:|
-| Amount of nodes |4039| 2020 | 12115 |
-| Amount of edges | 88234 | 55633 | 336103 |
-| Average degree | 43.691 | 55.082 | 55.485 |
-| Network diameter | 8 | 6 | 20 |
-| Graph density | 0.011 | 0.027 | 0.005 |
-| Connected components | 1 | 5 | 3 |
-| Avg. Clustering Coefficient | 0.617 | 0.643 | 0.628 |
-| Avg. Path Length | 3.693 | 3.462 | 9.596 |
+|| Original Facebook Graph | Sampled version (1 version using TIES), fraction = 0.5 of the original graph| Sampled version (1 version using TIES), fraction = 0.6 of the original graph | Expanded version - 3 times using TIES and the star topology structure. Sampled 5 different versions of the graph using a fraction of 0.6 of the original graph and connected them using the star structure. |
+|:-------|:------------------------|:------------------------------------------------------:|:----:|:-----:|
+| Amount of nodes |4039| 2020 | 2423 | 12115 |
+| Amount of edges | 88234 | 55633 | 67363 | 336103 |
+| Average degree | 43.691 | 55.082 | 55.603 | 55.485 |
+| Network diameter | 8 | 6 | 7 | 20 |
+| Graph density | 0.011 | 0.027 | 0.023 | 0.005 |
+| Connected components | 1 | 5 | 2 | 3 |
+| Avg. Clustering Coefficient | 0.617 | 0.643 | 0.626 | 0.628 |
+| Avg. Path Length | 3.693 | 3.462 | 3.588 | 9.596 |
