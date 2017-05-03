@@ -3,6 +3,7 @@ from __future__ import absolute_import
 import unittest
 
 import networkx as nx
+from algorithm.expanding.expander import *
 
 
 class TestTIES(unittest.TestCase):

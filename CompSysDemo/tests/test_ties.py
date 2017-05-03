@@ -3,7 +3,7 @@ from __future__ import absolute_import
 import unittest
 
 import networkx as nx
-
+from algorithm.sampling.ties import *
 
 class TestTIES(unittest.TestCase):
     def test_edge_based_node_step(self):
