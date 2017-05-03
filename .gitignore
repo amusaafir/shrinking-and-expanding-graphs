@@ -4,3 +4,6 @@ Misc/.vs
 CompSysDemo/.idea/workspace.xml
 CompSysDemo/*.pyc
 CompSysDemo/io/*.pyc
+CompSysDemo/algorithm/*.pyc
+*.pyc
+
