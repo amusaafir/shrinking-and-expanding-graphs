@@ -1,20 +1,21 @@
+from algorithm.expanding.expander import *
+from algorithm.helper.graph_metrics import *
 from io.graph_loader import *
 from io.graph_writer import *
-from expander import *
-from graph_metrics import *
+from algorithm.expanding.topology.star import *
 
 graph_metrics = GraphMetrics()
 facebook_graph_src = "datasets/facebook_graph.txt"
 astro_graph_src = "datasets/CA-AstroPh_input.txt"
 graph_loader = GraphLoader()
-input_graph = graph_loader.create_undirected_graph_from_file(astro_graph_src)
+input_graph = graph_loader.create_undirected_graph_from_file(facebook_graph_src)
 print 'Amount of nodes original (input) graph: ', input_graph.number_of_nodes()
 print 'Amount of edges original (input) graph: ', input_graph.number_of_edges()
 
 graph_writer = GraphWriter()
 expander = Expander()
-expanded_graph = expander.expand(input_graph, 3)
-graph_writer.save_edge_list_graph_to_csv(expanded_graph, "expanded_astro_graph")
+expanded_graph = expander.expand(input_graph, 3, StarTopology())
+graph_writer.save_edge_list_graph_to_csv(expanded_graph, "expanded_fb_test")
 
 """
 # Ties test for Gephi #

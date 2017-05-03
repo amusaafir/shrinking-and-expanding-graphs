@@ -1,7 +1,9 @@
 from __future__ import absolute_import
-from ties import *
-import networkx as nx
+
 import unittest
+
+import networkx as nx
+
 
 class TestTIES(unittest.TestCase):
     def test_edge_based_node_step(self):

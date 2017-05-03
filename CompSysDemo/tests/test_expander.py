@@ -1,8 +1,9 @@
 from __future__ import absolute_import
-from expander import *
-import networkx as nx
+
 import unittest
-from io.graph_writer import *
+
+import networkx as nx
+
 
 class TestTIES(unittest.TestCase):
     def test_convert_graph_to_indicated(self):

@@ -1,0 +1,2 @@
+class TopologyStructure(object):
+    pass
