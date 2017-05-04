@@ -1,5 +1,6 @@
 TODO:
 
+- Add ability to increase density between the sampled graphs for the Link topology.
 - Refactor code
 - Add support for different fraction (e.g.  2.3 ) - automate this process.
 - NOTE: the above point is not safe for controlling the linking yet.
