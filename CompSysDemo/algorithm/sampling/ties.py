@@ -21,15 +21,14 @@ class TIES:
 
         working_graph_edges = working_graph.edges()
 
-        while len(graph.nodes()) < max_amount_of_sampled_nodes:
+        while nx.number_of_nodes(graph) < max_amount_of_sampled_nodes:
             random_edge_index = random.randint(0, len(working_graph_edges)-1)
             edge = working_graph_edges[random_edge_index]
             graph.add_node(edge[0])
             graph.add_node(edge[1])
             del working_graph_edges[random_edge_index]
-            #print 'Collected ', len(graph.nodes()), ' vertices.'
 
-        print 'Edge based node step finished. Collected a total of ', len(graph.nodes()), ' vertices.'
+        print 'Edge based node step finished. Collected a total of ', nx.number_of_nodes(graph), ' vertices.'
 
         return graph
 
